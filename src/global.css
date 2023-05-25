@@ -1,0 +1,33 @@
+:root {
+  --primary: #D23A3A;
+  --secondary: #F2F2F2;
+  --background: #f2f2f2;
+  --mainText: #333333;
+  --secondaryText: #828282;
+  --borderColor: #E0E0E0;
+  --borderRadius: 5px;
+  --boxShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --boxShadowHover: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  --boxShadowActive: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  --boxShadowFocus: 0px 0px 0px 2px var(--primary);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+button, input[type="submit"], input[type="reset"] {
+	border: none;
+	cursor: pointer;
+	outline: inherit;
+}
+
+body {
+  background-color: var(--background);
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--mainText);
+}
