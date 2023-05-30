@@ -40,5 +40,20 @@ Padrão de commit
 
 `feat(GF1): Implementa base do projeto`
 
+Git Flow
+----------------
+
+![Git flow Image](/public/gitflow.png "Git Flow to Front-end")
+
+### Para criar uma feature:
+1. A partir da branch `main`, crie uma nova branch com o seguinte padrão: `grupo-numero`, onde os grupos são os que foram definidos no tópico acima e o número é de 0000 até 9999. Exemplo: `GF1-1111`.
+2. Faça os commits na branch da feature
+3. Ao finalizar, solicite merge request para a `main`.
+4. Caso não haja conflitos, pode aceitar o merge request.
+5. Se houver conflitos, tente soluciona-los sem ferir o código do coleguinha, ou peça um help de alguém.
+
+#### Cosiderações importantes:
+***Se não souber Git, não hesite em pedir ajuda.**
+
 ## TODO:
 *   Definir e configurar tipo de estilização (StyledComponents || CSS Module || Sass)
