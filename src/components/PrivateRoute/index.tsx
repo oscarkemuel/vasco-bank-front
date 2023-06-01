@@ -1,13 +1,9 @@
 import { useEffect } from "react";
 import { APP_ROUTES } from "../../constants/appRoutes";
 import { useAuth } from "../../contexts/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Outlet } from "react-router-dom";
 
-type PrivateRouteProps = {
-  children: React.ReactNode;
-}
-
-const PrivateRoute = ({children}: PrivateRouteProps) => {
+const PrivateRoute = () => {
   const { userIsLogged, isLoading } = useAuth()
   const navigate = useNavigate()
 
@@ -24,7 +20,7 @@ const PrivateRoute = ({children}: PrivateRouteProps) => {
   return (
     <>
       {(!userIsLogged && isLoading) && <h1>Carregando..</h1>}
-      {(userIsLogged && !isLoading) && children}
+      {(userIsLogged && !isLoading) && <Outlet />}
     </>
   )
 }
