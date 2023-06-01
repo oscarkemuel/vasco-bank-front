@@ -5,7 +5,7 @@ interface Investment {
   balance: number;
 }
 
-const investments: Investment[] = [
+export const investments: Investment[] = [
   {
     type: "tesouro-direto",
     label: "Tesouro Direto",
@@ -20,4 +20,3 @@ const investments: Investment[] = [
   },
 ];
 
-export default investments;
