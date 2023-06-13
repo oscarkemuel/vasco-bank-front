@@ -1,23 +1,12 @@
-import { useState } from "react";
-import { useAuth } from "../../contexts/AuthContext";
-import logo from '../../assets/images/logo2.png'
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo2.png";
 
-export function Login() {
-  const { login } = useAuth();
-
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  function handleLogin() {
-    login({ email, password });
-  }
-
+export function Register() {
   return (
     <>
       <meta charSet="utf-8" />
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-      <title>Páginas / Login - Template Bootstrap NiceAdmin</title>
+      <title>Páginas / Registro - Modelo de Template NiceAdmin Bootstrap</title>
       <meta content="" name="description" />
       <meta content="" name="keywords" />
       {/* Favicons */}
@@ -49,11 +38,11 @@ export function Login() {
       {/* Template Main CSS File */}
       <link href="assets/css/style.css" rel="stylesheet" />
       {/* =======================================================
-  * Template Name: NiceAdmin
-  * Updated: Mar 09 2023 with Bootstrap v5.2.3
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
+  * Nome do Template: NiceAdmin
+  * Atualizado em: 09 de Março de 2023 com Bootstrap v5.2.3
+  * URL do Template: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Autor: BootstrapMade.com
+  * Licença: https://bootstrapmade.com/license/
   ======================================================== */}
       <main>
         <div className="container">
@@ -62,38 +51,53 @@ export function Login() {
               <div className="row justify-content-center">
                 <div className="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
                   <div className="d-flex justify-content-center py-4">
-                    <Link to="/" className="logo d-flex align-items-center w-auto">
+                    <Link
+                      to="/"
+                      className="logo d-flex align-items-center w-auto"
+                    >
                       <img src={logo} alt="" />
                     </Link>
                   </div>
-                  {/* End Logo */}
+                  {/* Fim do Logo */}
                   <div className="card mb-3">
                     <div className="card-body">
                       <div className="pt-4 pb-2">
                         <h5 className="card-title text-center pb-0 fs-4">
-                          Faça login na sua conta
+                          Criar uma Conta
                         </h5>
                         <p className="text-center small">
-                          Insira seu nome de usuário e senha para fazer login
+                          Insira seus dados pessoais para criar uma conta
                         </p>
                       </div>
                       <form className="row g-3 needs-validation">
                         <div className="col-12">
+                          <label htmlFor="yourName" className="form-label">
+                            Seu Nome Completo
+                          </label>
+                          <input
+                            type="text"
+                            name="name"
+                            className="form-control"
+                            id="yourName"
+                            required
+                          />
+                          <div className="invalid-feedback">
+                            Por favor, insira seu nome!
+                          </div>
+                        </div>
+                        <div className="col-12">
                           <label htmlFor="yourEmail" className="form-label">
-                            Email
+                            Seu Email
                           </label>
                           <input
                             type="email"
                             name="email"
                             className="form-control"
                             id="yourEmail"
-                            placeholder="Email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
                             required
                           />
                           <div className="invalid-feedback">
-                            Por favor, insira seu email.
+                            Por favor, insira um endereço de e-mail válido!
                           </div>
                         </div>
                         <div className="col-12">
@@ -105,9 +109,6 @@ export function Login() {
                             name="password"
                             className="form-control"
                             id="yourPassword"
-                            placeholder="Senha"
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
                             required
                           />
                           <div className="invalid-feedback">
@@ -115,35 +116,17 @@ export function Login() {
                           </div>
                         </div>
                         <div className="col-12">
-                          <div className="form-check">
-                            <input
-                              className="form-check-input"
-                              type="checkbox"
-                              name="remember"
-                              defaultValue="true"
-                              id="rememberMe"
-                            />
-                            <label
-                              className="form-check-label"
-                              htmlFor="rememberMe"
-                            >
-                              Lembrar-me
-                            </label>
-                          </div>
-                        </div>
-                        <div className="col-12">
                           <button
                             className="btn btn-primary w-100"
-                            type="button"
-                            onClick={handleLogin}
+                            type="submit"
                           >
-                            Login
+                            Criar Conta
                           </button>
                         </div>
                         <div className="col-12">
                           <p className="small mb-0">
-                            Não possui uma conta?{" "}
-                            <Link to="/register">Crie uma conta</Link>
+                            Já tem uma conta?{" "}
+                            <Link to="/login">Faça o login</Link>
                           </p>
                         </div>
                       </form>
@@ -155,15 +138,15 @@ export function Login() {
           </section>
         </div>
       </main>
-      {/* End #main */}
+      {/* Fim do #main */}
       <a
-        href="#"  
+        href="#"
         className="back-to-top d-flex align-items-center justify-content-center"
       >
         <i className="bi bi-arrow-up-short" />
       </a>
-      {/* Vendor JS Files */}
-      {/* Template Main JS File */}
+      {/* Arquivos JS do Fornecedor */}
+      {/* Arquivo JS Principal do Template */}
     </>
   );
 }
