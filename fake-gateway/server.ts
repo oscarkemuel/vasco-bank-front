@@ -1,6 +1,7 @@
 import express from 'express';
 import { authService } from './services/authService';
 import cors from 'cors';
+import { currentAccountService } from './services/currentAccountService';
 
 const app = express();
 
@@ -9,6 +10,7 @@ app.use(cors({ origin: '*' })) ;
 
 // set services
 app.use('/api/auth', authService)
+app.use('/api/contaCorrente', currentAccountService)
 
 app.get('/', (req, res) => {
   const services = [

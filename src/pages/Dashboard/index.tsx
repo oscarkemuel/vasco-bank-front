@@ -15,6 +15,9 @@ export function Dashboard() {
       <Link to="/financing">Financiamento</Link><br/>
       <Link to="/insurance">Seguro</Link><br/>
       <Link to="/creditCard">Cartão de Crédito</Link><br/>
+
+      <Link to="/current-account">Conta</Link><br />
+
       <button onClick={handleLogout}>Logout</button>
     </div>
   );

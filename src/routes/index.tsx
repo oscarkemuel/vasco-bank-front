@@ -7,52 +7,23 @@ import { Investments } from "../pages/Investments";
 import { Financing } from "../pages/Financing";
 import { Insurance } from "../pages/Insurance";
 import { CreditCard } from "../pages/CreditCard";
+import { Transfer } from "../pages/Transfer";
+import { CurrentAccount } from "../pages/CurrentAccount";
 
 export const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
-      <Route
-        path="/dashboard"
-        element={
-          <PrivateRoute>
-            <Dashboard />
-          </PrivateRoute>
-        }
-      />
-      <Route
-        path="/investments"
-        element={
-          <PrivateRoute>
-            <Investments />
-          </PrivateRoute>
-        }
-      />
-      <Route
-        path="/financing"
-        element={
-          <PrivateRoute>
-            <Financing />
-          </PrivateRoute>
-        }
-      />
-      <Route
-        path="/insurance"
-        element={
-          <PrivateRoute>
-            <Insurance />
-          </PrivateRoute>
-        }
-      />
-      <Route
-        path="/creditCard"
-        element={
-          <PrivateRoute>
-            <CreditCard />
-          </PrivateRoute>
-        }
-      />
+      <Route element={<PrivateRoute />}>
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/current-account" element={<CurrentAccount />} />
+        <Route path="/transfer" element={<Transfer />} />
+        <Route path="/investments" element={<Investments />} />
+        <Route path="/financing" element={<Financing />} />
+        <Route path="/insurance" element={<Insurance />} />
+        <Route path="/creditCard" element={<CreditCard />} />
+      </Route>
       <Route path="*" element={<h1>Not Found</h1>} />
     </Routes>
   );

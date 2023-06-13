@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import investments from "../../mock/investments";
+import {investments} from "../../mock/investments";
 
 const calculateTesouroDiretoPerformance = (balance: number) => {
    
@@ -48,7 +48,7 @@ export const Investments = () => {
           performance: performance,
         };
 
-        setInvestmentHistory((prevHistory) => [...prevHistory, newInvestment]);
+        // setInvestmentHistory((prevHistory) => [...prevHistory, newInvestment]);
 
         alert(`Investimento feito com sucesso!`);
       } else {
@@ -79,7 +79,7 @@ export const Investments = () => {
       <ul>
         {investmentHistory.map((investment, index) => (
           <li key={index}>
-            Investimento: {setInvestmentAmount}, Rendimento: R$ {investment.performance}
+            {/* Investimento: {setInvestmentAmount}, Rendimento: R$ {investment.performance} */}
           </li>
         ))}
       </ul>
