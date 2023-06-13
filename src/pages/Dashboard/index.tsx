@@ -211,27 +211,27 @@ export function Dashboard() {
           </li>
           {/* End Components Nav */}
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link collapsed"
               data-bs-target="#forms-nav"
               data-bs-toggle="collapse"
-              href="#"
+              to="/creditCard"
             >
               <i className="bi bi-credit-card" />
               <span>Meus Cartões</span>
-            </a>
+            </Link>
           </li>
           {/* End Forms Nav */}
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link collapsed"
               data-bs-target="#charts-nav"
               data-bs-toggle="collapse"
-              href="#"
+              to="/insurance"
             >
               <i className="bi bi-shield-check" />
               <span>Seguros</span>
-            </a>
+            </Link>
           </li>
           {/* End Charts Nav */}
           <li className="nav-item">
