@@ -7,26 +7,15 @@ export function Home() {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" href="./src/icon.png" type="image/x-icon" />
+        <link rel="shortcut icon" href="./src/assets/images/icon.png" type="image/x-icon" />
         <link rel="stylesheet" href="./index.css" />
-        {/* Bootstrap CSS */}
-        <link
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-          crossOrigin="anonymous"
-        />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
-        />
         <title>VSCO</title>
       </head>
       <main>
         <nav className="navbar navbar-expand-lg navbar-dark navbarcolor" style={{ backgroundColor: "#363636" }}>
           <div className="container-fluid">
             <a href="#" className="navbar-brand">
-              <img src="./src/logo4.png" alt="" />
+              <img src="./src/assets/images/logo4.png" alt="" />
             </a>
             <button
               type="button"
@@ -58,7 +47,7 @@ export function Home() {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    <img src="./src/avatar.png" id="navbarAvatar" alt="" />
+                    <img src="./src/assets/images/avatar.png" id="navbarAvatar" alt="" />
                   </button>
                   <ul className="dropdown-menu">
                     <li>
@@ -96,7 +85,7 @@ export function Home() {
                 style={{ marginTop: "0px !important" }}
               >
                 <img
-                  src="./src/logo3.png"
+                  src="./src/assets/images/logo3.png"
                   className="d-block mx-lg-auto img-fluid"
                   alt="Bootstrap Themes"
                   width={700}
@@ -128,7 +117,7 @@ export function Home() {
                   <button
                     type="button"
                     className="btn btn-light btn-lg px-4"
-                    style={{ zIndex: 11 }}
+                    style={{ zIndex: 1000 }}
                   >
                     <Link to="/login">Login</Link>
                   </button>
@@ -212,7 +201,7 @@ export function Home() {
                 {/* Content */}
                 <h6 className="text-uppercase fw-bold mb-4">
                   <i className="fas fa-gem me-3" />
-                  <img src="./src/icon.png" id="navbarAvatar" alt="" />
+                  <img src="./src/assets/images/icon.png" id="navbarAvatar" alt="" />
                 </h6>
                 <p></p>
               </div>
