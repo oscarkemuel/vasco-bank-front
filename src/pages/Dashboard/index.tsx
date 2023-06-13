@@ -11,6 +11,10 @@ export function Dashboard() {
   return (
     <div>
       <h1>Dashboard</h1>
+      <Link to="/investments">Investimentos</Link><br/>
+      <Link to="/financing">Financiamento</Link><br/>
+      <Link to="/insurance">Seguro</Link><br/>
+      <Link to="/creditCard">Cartão de Crédito</Link><br/>
 
       <Link to="/current-account">Conta</Link><br />
 

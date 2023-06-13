@@ -3,8 +3,12 @@ import { Home } from "../pages/Home";
 import { Login } from "../pages/Login";
 import PrivateRoute from "../components/PrivateRoute";
 import { Dashboard } from "../pages/Dashboard";
-import { CurrentAccount } from "../pages/CurrentAccount";
+import { Investments } from "../pages/Investments";
+import { Financing } from "../pages/Financing";
+import { Insurance } from "../pages/Insurance";
+import { CreditCard } from "../pages/CreditCard";
 import { Transfer } from "../pages/Transfer";
+import { CurrentAccount } from "../pages/CurrentAccount";
 
 export const AppRoutes = () => {
   return (
@@ -15,6 +19,10 @@ export const AppRoutes = () => {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/current-account" element={<CurrentAccount />} />
         <Route path="/transfer" element={<Transfer />} />
+        <Route path="/investments" element={<Investments />} />
+        <Route path="/financing" element={<Financing />} />
+        <Route path="/insurance" element={<Insurance />} />
+        <Route path="/creditCard" element={<CreditCard />} />
       </Route>
       <Route path="*" element={<h1>Not Found</h1>} />
     </Routes>
