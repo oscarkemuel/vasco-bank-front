@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
-import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 export function Home() {
+  const navigate = useNavigate();
+
   return (
     <>
       <head>
@@ -111,15 +112,17 @@ export function Home() {
                       backgroundColor: "#d23a3a",
                       color: "white",
                     }}
+                    onClick={() => navigate("/register")}
                   >
-                    Register
+                    Registrar agora
                   </button>
                   <button
                     type="button"
                     className="btn btn-light btn-lg px-4"
                     style={{ zIndex: 1000 }}
+                    onClick={() => navigate("/login")}
                   >
-                    <Link to="/login">Login</Link>
+                    Entrar
                   </button>
                 </div>
               </div>

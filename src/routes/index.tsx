@@ -9,12 +9,14 @@ import { Insurance } from "../pages/Insurance";
 import { CreditCard } from "../pages/CreditCard";
 import { Transfer } from "../pages/Transfer";
 import { CurrentAccount } from "../pages/CurrentAccount";
+import { Register } from "../pages/Register";
 
 export const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
       <Route element={<PrivateRoute />}>
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/current-account" element={<CurrentAccount />} />

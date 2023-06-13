@@ -75,46 +75,20 @@ export function Dashboard() {
               <div className="navbar-nav">
                 <a href="#" className="nav-item nav-link" />
               </div>
-              <form className="d-flex ms-auto">
-                <input
-                  type="text"
-                  className="form-control me-sm-2"
-                  placeholder="Busque..."
-                />
-                <button type="submit" className="btn btn-outline-light">
-                  <i className="bi bi-search" />
-                </button>
-              </form>
+              {/* logout */}
+              <button className="btn btn-danger d-flex ms-auto" onClick={handleLogout}>
+                Sair
+              </button>
+              {/* End logout */}
               <div className="profile">
                 <div className="btn-group">
                   <button
                     type="button"
-                    className="btn dropdown-toggle"
-                    data-bs-toggle="dropdown"
+                    className="btn"
                     aria-expanded="false"
                   >
-                    <img src="../src/avatar.png" id="navbarAvatar" alt="" />
+                    <img src="../src/assets/images/avatar.png" id="navbarAvatar" alt="" />
                   </button>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Sobre
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Preferências
-                      </a>
-                    </li>
-                    <li>
-                      <hr className="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="../index.html">
-                        Sair <i className="bi bi-box-arrow-left" />
-                      </a>
-                    </li>
-                  </ul>
                 </div>
               </div>
             </div>
@@ -306,54 +280,6 @@ export function Dashboard() {
             {/* Left side columns */}
             <div className="col-lg-8">
               <div className="row">
-                {/* Sales Card */}
-                <div className="col-xxl-4 col-md-6">
-                  <div className="card info-card sales-card">
-                    <div className="filter">
-                      <a className="icon" href="#" data-bs-toggle="dropdown">
-                        <i className="bi bi-three-dots" />
-                      </a>
-                      <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                        <li className="dropdown-header text-start">
-                          <h6>Filter</h6>
-                        </li>
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            Today
-                          </a>
-                        </li>
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            This Month
-                          </a>
-                        </li>
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            This Year
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="card-body">
-                      <h5 className="card-title">
-                        Compras<span> | Esse mês</span>
-                      </h5>
-                      <div className="d-flex align-items-center">
-                        <div className="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                          <i className="bi bi-cart" />
-                        </div>
-                        <div className="ps-3">
-                          <h6>37</h6>
-                          <span className="text-success small pt-1 fw-bold">
-                            +12%
-                          </span>{" "}
-                          <span className="text-muted small pt-2 ps-1" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                {/* End Sales Card */}
                 {/* Revenue Card */}
                 <div className="col-xxl-4 col-md-6">
                   <div className="card info-card revenue-card">
@@ -453,45 +379,6 @@ export function Dashboard() {
                   </div>
                 </div>
                 {/* End Customers Card */}
-                {/* Reports */}
-                <div className="col-12">
-                  <div className="card">
-                    <div className="filter">
-                      <a className="icon" href="#" data-bs-toggle="dropdown">
-                        <i className="bi bi-three-dots" />
-                      </a>
-                      <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                        <li className="dropdown-header text-start">
-                          <h6>Filter</h6>
-                        </li>
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            Today
-                          </a>
-                        </li>
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            This Month
-                          </a>
-                        </li>
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            This Year
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="card-body">
-                      <h5 className="card-title">
-                        Resultados <span> | Esse mês</span>
-                      </h5>
-                      {/* Line Chart */}
-                      <div id="reportsChart" />
-                      {/* End Line Chart */}
-                    </div>
-                  </div>
-                </div>
-                {/* End Reports */}
                 {/* Recent Sales */}
                 <div className="col-12">
                   <div className="card recent-sales overflow-auto">
@@ -616,105 +503,6 @@ export function Dashboard() {
                   </div>
                 </div>
                 {/* End Recent Sales */}
-                {/* Top Selling */}
-                <div className="col-12">
-                  <div className="card top-selling overflow-auto">
-                    <div className="filter">
-                      <a className="icon" href="#" data-bs-toggle="dropdown">
-                        <i className="bi bi-three-dots" />
-                      </a>
-                      <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                        <li className="dropdown-header text-start">
-                          <h6>Filter</h6>
-                        </li>
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            Today
-                          </a>
-                        </li>
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            This Month
-                          </a>
-                        </li>
-                        <li>
-                          <a className="dropdown-item" href="#">
-                            This Year
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="card-body pb-0">
-                      <h5 className="card-title">
-                        Tabela Exemplo<span> | Hoje</span>
-                      </h5>
-                      <table className="table table-borderless">
-                        <thead>
-                          <tr>
-                            <th scope="col">Preview</th>
-                            <th scope="col">xxxx</th>
-                            <th scope="col">xxxx</th>
-                            <th scope="col">xxxx</th>
-                            <th scope="col">xxxx</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>
-                              <a href="#" className="text-primary fw-bold">
-                                Ut inventore ipsa voluptas nulla
-                              </a>
-                            </td>
-                            <td>$64</td>
-                            <td className="fw-bold">124</td>
-                            <td>R$5,828</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <a href="#" className="text-primary fw-bold">
-                                Exercitationem similique doloremque
-                              </a>
-                            </td>
-                            <td>R$46</td>
-                            <td className="fw-bold">98</td>
-                            <td>R$4,508</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <a href="#" className="text-primary fw-bold">
-                                Doloribus nisi exercitationem
-                              </a>
-                            </td>
-                            <td>R$59</td>
-                            <td className="fw-bold">74</td>
-                            <td>R$4,366</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <a href="#" className="text-primary fw-bold">
-                                Officiis quaerat sint rerum error
-                              </a>
-                            </td>
-                            <td>$32</td>
-                            <td className="fw-bold">63</td>
-                            <td>R$2,016</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <a href="#" className="text-primary fw-bold">
-                                Sit unde debitis delectus repellendus
-                              </a>
-                            </td>
-                            <td>R$79</td>
-                            <td className="fw-bold">41</td>
-                            <td>R$3,239</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </div>
-                </div>
-                {/* End Top Selling */}
               </div>
             </div>
             {/* End Left side columns */}
@@ -813,169 +601,6 @@ export function Dashboard() {
                 </div>
               </div>
               {/* End Recent Activity */}
-              {/* Budget Report */}
-              <div className="card">
-                <div className="filter">
-                  <a className="icon" href="#" data-bs-toggle="dropdown">
-                    <i className="bi bi-three-dots" />
-                  </a>
-                  <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li className="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Today
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        This Month
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        This Year
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="card-body pb-0">
-                  <h5 className="card-title">Report Investimentos</h5>
-                  <div
-                    id="budgetChart"
-                    style={{ minHeight: 400 }}
-                    className="echart"
-                  />
-                </div>
-              </div>
-              {/* End Budget Report */}
-              {/* Website Traffic */}
-              <div className="card">
-                <div className="filter">
-                  <a className="icon" href="#" data-bs-toggle="dropdown">
-                    <i className="bi bi-three-dots" />
-                  </a>
-                  <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li className="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Today
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        This Month
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        This Year
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="card-body pb-0">
-                  <h5 className="card-title">
-                    Divisão de gastos<span> | Esse mês</span>
-                  </h5>
-                  <div
-                    id="trafficChart"
-                    style={{ minHeight: 400 }}
-                    className="echart"
-                  />
-                </div>
-              </div>
-              {/* End Website Traffic */}
-              {/* News & Updates Traffic */}
-              <div className="card">
-                <div className="filter">
-                  <a className="icon" href="#" data-bs-toggle="dropdown">
-                    <i className="bi bi-three-dots" />
-                  </a>
-                  <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li className="dropdown-header text-start">
-                      <h6>Filter</h6>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Today
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        This Month
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        This Year
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <div className="card-body pb-0">
-                  <h5 className="card-title">Notícias e Atualizações</h5>
-                  <div className="news">
-                    <div className="post-item clearfix">
-                      <img src="assets/img/news-1.jpg" alt="" />
-                      <h4>
-                        <a href="#">Nihil blanditiis at in nihil autem</a>
-                      </h4>
-                      <p>
-                        Sit recusandae non aspernatur laboriosam. Quia enim
-                        eligendi sed ut harum...
-                      </p>
-                    </div>
-                    <div className="post-item clearfix">
-                      <img src="assets/img/news-2.jpg" alt="" />
-                      <h4>
-                        <a href="#">Quidem autem et impedit</a>
-                      </h4>
-                      <p>
-                        Illo nemo neque maiores vitae officiis cum eum turos
-                        elan dries werona nande...
-                      </p>
-                    </div>
-                    <div className="post-item clearfix">
-                      <img src="assets/img/news-3.jpg" alt="" />
-                      <h4>
-                        <a href="#">
-                          Id quia et et ut maxime similique occaecati ut
-                        </a>
-                      </h4>
-                      <p>
-                        Fugiat voluptas vero eaque accusantium eos. Consequuntur
-                        sed ipsam et totam...
-                      </p>
-                    </div>
-                    <div className="post-item clearfix">
-                      <img src="assets/img/news-4.jpg" alt="" />
-                      <h4>
-                        <a href="#">Laborum corporis quo dara net para</a>
-                      </h4>
-                      <p>
-                        Qui enim quia optio. Eligendi aut asperiores enim
-                        repellendusvel rerum cuder...
-                      </p>
-                    </div>
-                    <div className="post-item clearfix">
-                      <img src="assets/img/news-5.jpg" alt="" />
-                      <h4>
-                        <a href="#">Et dolores corrupti quae illo quod dolor</a>
-                      </h4>
-                      <p>
-                        Odit ut eveniet modi reiciendis. Atque cupiditate libero
-                        beatae dignissimos eius...
-                      </p>
-                    </div>
-                  </div>
-                  {/* End sidebar recent posts*/}
-                </div>
-              </div>
-              {/* End News & Updates */}
             </div>
             {/* End Right side columns */}
           </div>
