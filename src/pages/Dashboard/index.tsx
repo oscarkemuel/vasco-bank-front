@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 
 export function Dashboard() {
@@ -10,6 +11,9 @@ export function Dashboard() {
   return (
     <div>
       <h1>Dashboard</h1>
+
+      <Link to="/current-account">Conta</Link><br />
+
       <button onClick={handleLogout}>Logout</button>
     </div>
   );
