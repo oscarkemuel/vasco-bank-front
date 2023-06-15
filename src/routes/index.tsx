@@ -10,6 +10,8 @@ import { CreditCard } from "../pages/CreditCard";
 import { Transfer } from "../pages/Transfer";
 import { CurrentAccount } from "../pages/CurrentAccount";
 import { Register } from "../pages/Register";
+import { Profile } from "../pages/Profile";
+import { NotFound } from "../pages/NotFound";
 
 export const AppRoutes = () => {
   return (
@@ -19,6 +21,7 @@ export const AppRoutes = () => {
       <Route path="/register" element={<Register />} />
       <Route element={<PrivateRoute />}>
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/current-account" element={<CurrentAccount />} />
         <Route path="/transfer" element={<Transfer />} />
         <Route path="/investments" element={<Investments />} />
@@ -26,7 +29,7 @@ export const AppRoutes = () => {
         <Route path="/insurance" element={<Insurance />} />
         <Route path="/creditCard" element={<CreditCard />} />
       </Route>
-      <Route path="*" element={<h1>Not Found</h1>} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };

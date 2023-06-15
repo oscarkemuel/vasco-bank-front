@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function Home() {
   const navigate = useNavigate();
@@ -26,53 +26,6 @@ export function Home() {
             >
               <span className="navbar-toggler-icon" />
             </button>
-            <div className="collapse navbar-collapse" id="navbarCollapse7">
-              <div className="navbar-nav">
-                <a href="#" className="nav-item nav-link" />
-              </div>
-              <form className="d-flex ms-auto">
-                <input
-                  type="text"
-                  className="form-control me-sm-2"
-                  placeholder="Busque..."
-                />
-                <button type="submit" className="btn btn-outline-light">
-                  <i className="bi bi-search" />
-                </button>
-              </form>
-              <div className="profile">
-                <div className="btn-group">
-                  <button
-                    type="button"
-                    className="btn dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    <img src="./src/assets/images/avatar.png" id="navbarAvatar" alt="" />
-                  </button>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Sobre
-                      </a>
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Preferências
-                      </a>
-                    </li>
-                    <li>
-                      <hr className="dropdown-divider" />
-                    </li>
-                    <li>
-                      <a className="dropdown-item" href="#">
-                        Sair <i className="bi bi-box-arrow-left" />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
           </div>
         </nav>
         <section>
