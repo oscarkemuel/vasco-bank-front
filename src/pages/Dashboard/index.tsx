@@ -100,10 +100,10 @@ export function Dashboard() {
       <aside id="sidebar" className="sidebar">
         <ul className="sidebar-nav" id="sidebar-nav">
           <li className="nav-item">
-            <a className="nav-link " href="index.html">
+            <Link className="nav-link " to="/dashboard">
               <i className="bi bi-grid" />
               <span>Visão Geral</span>
-            </a>
+            </Link>
           </li>
           {/* End Dashboard Nav */}
           <li className="nav-item">
@@ -185,40 +185,53 @@ export function Dashboard() {
           </li>
           {/* End Components Nav */}
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link collapsed"
               data-bs-target="#forms-nav"
               data-bs-toggle="collapse"
-              href="#"
+              to="/creditCard"
             >
               <i className="bi bi-credit-card" />
               <span>Meus Cartões</span>
-            </a>
+            </Link>
           </li>
           {/* End Forms Nav */}
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link collapsed"
               data-bs-target="#charts-nav"
               data-bs-toggle="collapse"
-              href="#"
+              to="/insurance"
             >
               <i className="bi bi-shield-check" />
               <span>Seguros</span>
-            </a>
+            </Link>
+          </li>
+          {/* End Charts Nav */}
+          {/* End Forms Nav */}
+          <li className="nav-item">
+            <Link
+              className="nav-link collapsed"
+              data-bs-target="#charts-nav"
+              data-bs-toggle="collapse"
+              to="/financing"
+            >
+              <i className="bi bi-shield-check" />
+              <span>Financiamentos</span>
+            </Link>
           </li>
           {/* End Charts Nav */}
           <li className="nav-item">
-            <a
+            <Link
               className="nav-link collapsed"
               data-bs-target="#icons-nav"
               data-bs-toggle="collapse"
-              href="#"
+              to="/investments"
             >
               <i className="bi bi-gem" />
               <span>Investimentos</span>
               <i className="bi bi-chevron-down ms-auto" />
-            </a>
+            </Link>
             <ul
               id="icons-nav"
               className="nav-content collapse "
