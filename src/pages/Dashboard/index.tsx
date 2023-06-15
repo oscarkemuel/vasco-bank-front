@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../contexts/AuthContext";
 
 export function Dashboard() {
   const { logOut } = useAuth();
+  const navigate = useNavigate();
 
   function handleLogout() {
     logOut();
@@ -24,7 +25,7 @@ export function Dashboard() {
     <>
       <meta charSet="utf-8" />
       <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-      <title>Dashboard - NiceAdmin Bootstrap Template</title>
+      <title>Dashboard - </title>
       <meta content="" name="description" />
       <meta content="" name="keywords" />
       {/* Favicons */}
@@ -86,6 +87,7 @@ export function Dashboard() {
                     type="button"
                     className="btn"
                     aria-expanded="false"
+                    onClick={() => navigate('/profile')}
                   >
                     <img src="../src/assets/images/avatar.png" id="navbarAvatar" alt="" />
                   </button>
