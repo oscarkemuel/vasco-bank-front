@@ -373,10 +373,12 @@ export const CreditCard = () => {
                         </div>
                         <div className="ps-3">
                           <h6>R$2,152</h6>
-                          <span className="text-success small pt-1 fw-bold">
+                          <span className="text-danger small pt-1 fw-bold">
                             +45%
                           </span>{" "}
-                          <span className="text-muted small pt-2 ps-1" />
+                          <span className="text-muted small pt-2 ps-1">
+                            Elevou os gastos
+                          </span>
                         </div>
                       </div>
                     </div>
