@@ -12,5 +12,13 @@ export type IPostLogin = {
 }
 
 export type IPostLoginResponse = {
+  tipo: string;
+  email: string;
   token: string;
+}
+
+export type IGetMeResponse = {
+  id: number;
+  nome: string;
+  email: string;
 }
