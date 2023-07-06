@@ -3,13 +3,13 @@ import { IRequestMethods } from "../../requestMethods";
 import axiosInstance from "../../axiosInstance";
 
 export class AccountAPI implements IRequestMethods {
-  url = '/account';
+  url = '/usuario/api';
 
   post(body: any){
-    return axiosInstance.post(`${this.url}/api/usuarios`, body);
+    return axiosInstance.post(`${this.url}/usuarios`, body);
   }
 
   put(body: any){
-    return axiosInstance.put(`${this.url}/api/usuarios`, body);
+    return axiosInstance.put(`${this.url}/usuarios`, body);
   }
 }

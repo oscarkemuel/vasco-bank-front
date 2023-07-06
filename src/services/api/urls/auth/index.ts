@@ -3,7 +3,7 @@ import { IRequestMethods } from "../../requestMethods";
 import { IPostLogin, IPostLoginResponse } from "./types";
 
 export class AuthAPI implements IRequestMethods {
-  url = 'http://20.231.32.210:7004/autenticacao'
+  url = '/autenticacao/autenticacao'
 
   login(data: IPostLogin) {
     return axiosInstance.post<IPostLoginResponse>(`${this.url}/autenticar`, {

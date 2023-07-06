@@ -1,7 +1,16 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo2.png";
+import api from "../../services/api";
 
 export function Register() {
+  const handleSubmit = () => {
+    api.account.post({
+      name: "Teste",
+      email: "teste@gmail.com",
+      password: "123456",
+    })
+  }
+
   return (
     <>
       <meta charSet="utf-8" />
@@ -118,7 +127,8 @@ export function Register() {
                         <div className="col-12">
                           <button
                             className="btn btn-primary w-100"
-                            type="submit"
+                            // type="submit"
+                            onClick={handleSubmit}
                           >
                             Criar Conta
                           </button>
